@@ -2,7 +2,7 @@
   "name": "braintree-web",
   "version": "3.140.0",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "dist/hosted/web/3.140.0/js/index.js",
   "private": true,
   "repository": {
     "type": "git",
