@@ -42,7 +42,7 @@ function _createScriptTag(url, callbackName) {
 function _cleanupGlobal(callbackName) {
   try {
     delete window[callbackName];
-  } catch (_) {
+  } catch {
     window[callbackName] = null;
   }
 }

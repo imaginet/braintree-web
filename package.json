@@ -12,7 +12,7 @@
     "clean:playwright": "rm -rf test-results/ && rm -rf log*/ && rm -rf playwright-report/ && rm local.log",
     "jsdoc": "./scripts/npm-to-gulp jsdoc",
     "prebuild": "npm run prettier",
-    "build": "node scripts/npm-to-gulp build",
+    "build": "./scripts/npm-to-gulp build",
     "prelint": "npm run prettier",
     "lint": "eslint . --cache --fix",
     "lint-no-cache-no-fix": "eslint .",
