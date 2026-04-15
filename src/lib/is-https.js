@@ -3,7 +3,7 @@
 function isHTTPS(protocol) {
   protocol = protocol || window.location.protocol;
 
-  return protocol === "https:" || protocol === "capacitor:";
+  return protocol === "https:";
 }
 
 module.exports = {
