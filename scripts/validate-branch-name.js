@@ -29,7 +29,7 @@
  */
 
 const BRANCH_NAME_PATTERN = /^([A-Z]+-\d+\-)?[a-z0-9\-]*(\.\d+)?$$/;
-const EXEMPT_BRANCHES = ["master", "main"];
+const EXEMPT_BRANCHES = ["main"];
 
 function validateBranchName(branchName) {
   const cleanBranchName = branchName.replace("refs/heads/", "");

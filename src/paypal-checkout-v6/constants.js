@@ -82,6 +82,10 @@ var ANALYTICS_EVENTS = {
   CREDIT_OFFERED: ANALYTICS_PREFIX + ".credit.offered",
   CREDIT_ACCEPTED: ANALYTICS_PREFIX + ".credit.accepted",
 
+  // Pay Later
+  PAY_LATER_OFFERED: ANALYTICS_PREFIX + ".pay-later.offered",
+  PAY_LATER_ACCEPTED: ANALYTICS_PREFIX + ".pay-later.accepted",
+
   // Eligibility Check
   FIND_ELIGIBLE_METHODS_STARTED:
     ANALYTICS_PREFIX + ".find-eligible-methods.started",

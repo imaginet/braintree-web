@@ -1,5 +1,29 @@
 # CHANGELOG
 
+## 3.140.0 (2026-04-09)
+
+- Venmo
+  - Pass `venmoRiskCorrelationId` as a url parameter as `client-metadata-id`
+  - Fix misnamed `riskCorrelationId` variable in the Venmo createDesktop flow
+  - Fix Android Chrome in iframes to use breakout strategy instead of `window.open`
+  - Fix duplicate app-switch attempts when both hash-change and manual-return flows are enabled
+  - Fix return URL handling for non-default browsers on Android
+  - Fix `_handleWindowClosure` to only auto-cancel when `cancelOnReturnToBrowser` is `true`
+  - Fix tokenization result detection in same-origin iframes by reading hash/params from `window.top`
+  - Fix `getUrlParams` to prefer top window URL in same-origin iframe contexts
+  - Add polling de-duplication to prevent concurrent polling loops during tokenization
+
+## 3.139.0 (2026-04-01)
+
+- PayPal Checkout v6
+  - Add `commit` parameter to `createOneTimePaymentSession` and `createCheckoutWithVaultSession` to control button text and payment flow (defaults to `true` for "Pay Now" behavior)
+  - Add `onShippingOptionsChange` callback support for handling shipping option changes in checkout flow
+  - Add `createPayLaterSession` method to enable PayPal Pay Later payments
+  - Add PayPal Credit billing agreement session support: when `offerCredit` is set in `createBillingAgreementSession`, the SDK now routes to PayPal's credit-specific billing agreement session method
+  - Fix bug where the returnUrl and cancelUrl were not being correctly passed through in the createPayment() function
+  - Add `getDetails` method to `findEligibleMethods` result for retrieving additional payment method details (e.g., countryCode, productCode) from the PayPal SDK
+  - Fix bug where the `returnUrl` and `cancelUrl` were not being correctly passed through in the `createPayment()` function
+
 ## 3.138.0 (2026-03-10)
 
 - PayPal Checkout v6
@@ -9,7 +33,6 @@
 
 - Alternative Payment Method
   - Add support for Alternative Payment Method `crypto`
-- Update Data Collector error object
 
 ## 3.136.0 (2026-02-10)
 
