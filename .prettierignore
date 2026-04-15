@@ -1,0 +1,4 @@
+dist
+src/coverage
+**/*.html
+.claude/settings.local.json
